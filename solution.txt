@@ -1,0 +1,57 @@
+IN THE TABLEAU PROJECT OF ASSIMMENT 
+
+CREATE TABLE activities (
+  activity_id INT PRIMARY KEY,
+  activity_name VARCHAR(50)
+);
+
+INSERT INTO activities (activity_id, activity_name)
+VALUES (1, 'Walking'),
+(2, 'Running'),
+(3, 'Cycling'),
+(4, 'Swimming'),
+(5, 'Dancing');
+
+CREATE TABLE sensor_data (
+  sensor_id INT PRIMARY KEY,
+  sensor_name VARCHAR(50),
+  activity_id INT
+);
+
+INSERT INTO sensor_data (sensor_id, sensor_name, activity_id)
+VALUES (1, 'Accelerometer', 1),
+(2, 'Gyroscope', 1),
+(3, 'Magnetometer', 1),
+(4, 'Accelerometer', 2),
+(5, 'Gyroscope', 2),
+(6, 'Magnetometer', 2),
+(7, 'Accelerometer', 3),
+(8, 'Gyroscope', 3),
+(9, 'Magnetometer', 3),
+(10, 'Accelerometer', 4),
+(11, 'Gyroscope', 4),
+(12, 'Magnetometer', 4),
+(13, 'Accelerometer', 5),
+(14, 'Gyroscope', 5),
+(15, 'Magnetometer', 5);
+
+CREATE TABLE data_points (
+  data_point_id INT PRIMARY KEY,
+  sensor_id INT,
+  x_axis FLOAT,
+  y_axis FLOAT,
+  z_axis FLOAT,
+  timestamp TIMESTAMP
+);
+
+INSERT INTO data_points (sensor_id, x_axis, y_axis, z_axis, timestamp)
+VALUES (1, 1.0, 2.0, 3.0, '2023-01-01 00:00:00'),
+(2, 4.0, 5.0, 6.0, '2023-01-01 00:00:01'),
+(3, 7.0, 8.0, 9.0, '2023-01-01 00:00:02'),
+(4, 1.0, 2.0, 3.0, '2023-01-01 00:00:03'),
+(5, 4.0, 5.0, 6.0, '2023-01-01 00:00:04'),
+(6, 7.0, 8.0, 9.0, '2023-01-01 00:00:05'),
+(7, 1.0, 2.0, 3.0, '2023-01-01 00:00:06'),
+(8, 4.0, 5.0, 6.0, '2023-01-01 00:00:07'),
+(9, 7.0, 8.0, 9.0, '2023-01-01 00:00:08');
+This is just a simple example of how you can use Tableau to create a Human Activity Recognition component. You can customize the code and the visualizations to meet your specific needs.
